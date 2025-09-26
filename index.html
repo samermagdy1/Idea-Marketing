@@ -137,7 +137,7 @@
         }
 
         .logo {
-            font-size: 2.1rem;
+            font-size: 2rem;
             font-weight: 900;
             font-family: 'Cairo', 'Montserrat', sans-serif;
             background: linear-gradient(90deg, #7b2ff2 20%, #1e90ff 80%);
@@ -901,17 +901,7 @@
                 <img src="https://scontent.fcai24-1.fna.fbcdn.net/v/t39.30808-6/298639935_371888558456692_2806501379021496244_n.png?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=XXm0VVX8nsQQ7kNvwGpr3-v&_nc_oc=AdnB5HH1V65CdJNjgROdFBOsv5cSFO8jsyovSAKcvyjWyaT-tzJftDsapgLM1ZGueZo&_nc_zt=23&_nc_ht=scontent.fcai24-1.fna&_nc_gid=3S9-E3dy4QF9kPWEn2ssTQ&oh=00_AfZQqwSXxEFIXO8xf1aTSf2PuEYO-HjwiG4Y-4y7bbay9w&oe=68DB7638"
                     alt="Idea Marketing Logo" style="height:38px;vertical-align:middle;"> Idea Marketing
             </a>
-            <!-- <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div> -->
-            <!-- <ul class="nav-menu"> -->
-            <!-- <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#resources" class="nav-link">Our Work</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li> -->
-            <!-- </ul> -->
+
             <div class="nav-actions">
                 <div class="social-icons">
                     <a href="https://www.tiktok.com/@idea.marketing0" class="social-icon" title="TikTok"
@@ -929,6 +919,9 @@
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
+        </div>
+        <div class="hamburger">
+            <!-- <i class="fas fa-bars"></i> -->
         </div>
     </header>
 
@@ -1494,6 +1487,7 @@
         function loadResourceItems(resourceArray, container, type) {
             // Remove loading message
             container.innerHTML = '';
+            console.log('Loading resources:', type, resourceArray); // أضف هذا السطر
 
             if (!resourceArray || resourceArray.length === 0) {
                 container.innerHTML = '<div class="error-message">لا توجد أعمال متاحة حالياً. سيتم تحديث المحتوى قريباً.</div>';
