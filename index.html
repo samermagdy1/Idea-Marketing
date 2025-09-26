@@ -827,6 +827,44 @@
             }
         }
 
+        @media (max-width: 600px) {
+            .nav-actions {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                position: fixed;
+                right: 10px;
+                top: 80px;
+                z-index: 1001;
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 16px;
+                box-shadow: 0 4px 16px rgba(30, 144, 255, 0.1);
+                padding: 8px 4px 8px 8px;
+                gap: 0;
+            }
+
+            .nav-actions .social-icons {
+                flex-direction: column !important;
+                align-items: flex-end;
+                gap: 0;
+            }
+
+            .nav-actions .social-icon {
+                margin: 4px 0;
+                font-size: 1.5rem;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .theme-toggle {
+                margin-top: 8px;
+                align-self: flex-end;
+            }
+        }
+
         @media (max-width: 480px) {
             .section {
                 padding: 60px 0;
@@ -863,9 +901,9 @@
                 <img src="https://scontent.fcai24-1.fna.fbcdn.net/v/t39.30808-6/298639935_371888558456692_2806501379021496244_n.png?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=XXm0VVX8nsQQ7kNvwGpr3-v&_nc_oc=AdnB5HH1V65CdJNjgROdFBOsv5cSFO8jsyovSAKcvyjWyaT-tzJftDsapgLM1ZGueZo&_nc_zt=23&_nc_ht=scontent.fcai24-1.fna&_nc_gid=3S9-E3dy4QF9kPWEn2ssTQ&oh=00_AfZQqwSXxEFIXO8xf1aTSf2PuEYO-HjwiG4Y-4y7bbay9w&oe=68DB7638"
                     alt="Idea Marketing Logo" style="height:38px;vertical-align:middle;"> Idea Marketing
             </a>
-            <div class="hamburger">
+            <!-- <div class="hamburger">
                 <i class="fas fa-bars"></i>
-            </div>
+            </div> -->
             <!-- <ul class="nav-menu"> -->
             <!-- <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
@@ -874,23 +912,23 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li> -->
             <!-- </ul> -->
-            <!-- <div class="nav-actions">
+            <div class="nav-actions">
                 <div class="social-icons">
-                    <!-- <a href="https://www.tiktok.com/@idea.marketing0" class="social-icon" title="TikTok"
+                    <a href="https://www.tiktok.com/@idea.marketing0" class="social-icon" title="TikTok"
                         target="_blank"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.instagram.com/idea_marketing_motion" class="social-icon" title="Instagram"
                         target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.facebook.com/ideamarkering/photos" class="social-icon" title="Facebook"
-                        target="_blank"><i class="fab fa-facebook-f"></i></a> -->
+                        target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <!-- <a href="https://drive.google.com/drive/folders/1iE9BVNEV80GCc97zZa53KveO_W9EFGMY" -->
                     <!-- class="social-icon" title="Google Drive" target="_blank"><i class="fab fa-google-drive"></i></a> -->
-                    <!-- <a href="https://wa.me/966565530631" class="social-icon" title="WhatsApp" target="_blank"><i
+                    <a href="https://wa.me/966565530631" class="social-icon" title="WhatsApp" target="_blank"><i
                             class="fab fa-whatsapp"></i></a>
                 </div>
                 <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-moon"></i>
-                </button> -->
-            <!-- </div> --> -->
+                </button>
+            </div>
         </div>
     </header>
 
