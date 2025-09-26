@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idea Marketing | Motion Graphics & Digital Marketing</title>
+    <title>Idea Marketing - أجعل رؤيتك حقيقة</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
         /* CSS Variables for Theming */
         :root {
@@ -24,7 +27,7 @@
         .light-mode {
             --primary-bg: #f5f5f5;
             --secondary-bg: #ffffff;
-            --text-primary: #0d0d0d;
+            --text-primary: #000000;
             --text-secondary: #4a4a4a;
             --card-bg: rgba(255, 255, 255, 0.9);
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -42,12 +45,13 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--primary-bg);
+            font-family: 'Cairo', 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4c2ee0 0%, #0937dc 100%);
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
             transition: var(--transition);
+            min-height: 100vh;
         }
 
         a {
@@ -114,7 +118,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(13, 13, 13, 0.95);
+            background-color: rgb(187, 185, 206);
             z-index: 1000;
             padding: 15px 0;
             transition: var(--transition);
@@ -133,12 +137,17 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, var(--accent-orange), var(--accent-blue));
+            font-size: 2.1rem;
+            font-weight: 900;
+            font-family: 'Cairo', 'Montserrat', sans-serif;
+            background: linear-gradient(90deg, #7b2ff2 20%, #1e90ff 80%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .nav-menu {
@@ -187,15 +196,20 @@
             align-items: center;
             justify-content: center;
             transition: var(--transition);
+            font-size: 1.3rem;
+            box-shadow: 0 2px 8px rgba(123, 47, 242, 0.08);
         }
 
         .social-icon:hover {
-            background: linear-gradient(45deg, var(--accent-orange), var(--accent-blue));
-            transform: translateY(-3px);
+            background: linear-gradient(135deg, #7b2ff2 0%, #1e90ff 100%);
+            color: #fff;
+            transform: scale(1.08) translateY(-3px);
+            box-shadow: 0 4px 16px rgba(30, 144, 255, 0.18);
         }
 
         .theme-toggle {
-            background: var(--secondary-bg);
+            background: #f5f5f5;
+            ;
             border: none;
             width: 40px;
             height: 40px;
@@ -713,6 +727,42 @@
             background: var(--accent-orange);
         }
 
+        /* زر العمل على درايف */
+        .resource-drive-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--accent-blue);
+            color: var(--primary-bg);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: var(--transition);
+        }
+
+        .resource-drive-btn:hover {
+            background: var(--accent-orange);
+            color: #fff;
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-secondary);
+        }
+
+        /* Error State */
+        .error-message {
+            text-align: center;
+            padding: 20px;
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+            border-radius: var(--border-radius);
+            margin: 10px 0;
+        }
+
         /* Responsive Styles */
         @media (max-width: 1024px) {
 
@@ -816,14 +866,14 @@
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
+            <!-- <ul class="nav-menu"> -->
+            <!-- <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li><a href="#resources" class="nav-link">Our Work</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+                <li><a href="#contact" class="nav-link">Contact</a></li> -->
+            <!-- </ul> -->
             <div class="nav-actions">
                 <div class="social-icons">
                     <a href="https://www.tiktok.com/@idea.marketing0" class="social-icon" title="TikTok"
@@ -832,8 +882,8 @@
                         target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.facebook.com/ideamarkering/photos" class="social-icon" title="Facebook"
                         target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://drive.google.com/drive/folders/1iE9BVNEV80GCc97zZa53KveO_W9EFGMY"
-                        class="social-icon" title="Google Drive" target="_blank"><i class="fab fa-google-drive"></i></a>
+                    <!-- <a href="https://drive.google.com/drive/folders/1iE9BVNEV80GCc97zZa53KveO_W9EFGMY" -->
+                    <!-- class="social-icon" title="Google Drive" target="_blank"><i class="fab fa-google-drive"></i></a> -->
                     <a href="https://wa.me/966565530631" class="social-icon" title="WhatsApp" target="_blank"><i
                             class="fab fa-whatsapp"></i></a>
                 </div>
@@ -849,7 +899,7 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content animate__animated animate__fadeInDown">
-            <h1 class="hero-title" style="font-family:'Cairo',sans-serif;">Idea Marketing - جعل رؤيتك حقيقة</h1>
+            <h1 class="hero-title" style="font-family:'Cairo',sans-serif;">Idea Marketing - أجعل رؤيتك حقيقة</h1>
             <p class="hero-subtitle">نصنع لك هوية بصرية متكاملة وحلول تسويقية رقمية متطورة تجمع بين الإبداع والتقنية.
             </p>
             <div class="hero-buttons">
@@ -961,6 +1011,7 @@
                 <h3 style="margin-bottom: 30px; font-size: 1.8rem; text-align: center;">Motion Graphics</h3>
                 <div class="resource-grid" id="motion-graphics-grid">
                     <!-- Motion graphics items will be dynamically loaded here -->
+                    <div class="loading">جاري تحميل أعمال Motion Graphics...</div>
                 </div>
             </div>
 
@@ -969,6 +1020,7 @@
                 <h3 style="margin-bottom: 30px; font-size: 1.8rem; text-align: center;">Social Media Designs</h3>
                 <div class="resource-grid" id="social-media-grid">
                     <!-- Social media design items will be dynamically loaded here -->
+                    <div class="loading">جاري تحميل أعمال Social Media...</div>
                 </div>
             </div>
 
@@ -977,6 +1029,7 @@
                 <h3 style="margin-bottom: 30px; font-size: 1.8rem; text-align: center;">Logo Designs</h3>
                 <div class="resource-grid" id="logo-designs-grid">
                     <!-- Logo design items will be dynamically loaded here -->
+                    <div class="loading">جاري تحميل أعمال Logo Designs...</div>
                 </div>
             </div>
         </div>
@@ -1192,38 +1245,44 @@
             whatsapp: "https://wa.me/966565530631"
         };
 
-        // Motion Graphic Resources
+        // Motion Graphic Resources - Fixed links to work properly
         const motionGraphics = [
-            "https://drive.google.com/file/d/1SXPdtN0oIAIa7ADzZ3cIzBQsJW39hdV9/view?usp=drive_link",
-            "https://drive.google.com/file/d/1FRwcFr7I4Y4HRoYcfZj3giw1dMagEaTR/view?usp=drive_link",
-            "https://drive.google.com/file/d/1Sk6-ThL-kz0FkLx1eimS6vhDY09D0WVa/view?usp=drive_link",
-            "https://drive.google.com/file/d/1oI37L0PY_E6G0HJKXj-KvCnoCXOY6nSj/view?usp=drive_link",
-            "https://drive.google.com/file/d/1OpZWyOTheOW6ncPzo6A9Gnup8COMkstQ/view?usp=drive_link",
-            "https://drive.google.com/file/d/1LLlugmNBgGMJ1WbS-p1udgt7sO6o7v7y/view?usp=drive_link",
-            "https://drive.google.com/file/d/1hvqdVazU_5GtB1VYu1y_7sijPvHVqa78/view?usp=drive_link",
-            "https://drive.google.com/file/d/1VBCXlRoRbCrULubX4beSeT8RgfezIeU3/view?usp=drive_link"
+            "https://drive.google.com/file/d/1SXPdtN0oIAIa7ADzZ3cIzBQsJW39hdV9/preview",
+            "https://drive.google.com/file/d/1FRwcFr7I4Y4HRoYcfZj3giw1dMagEaTR/preview",
+            "https://drive.google.com/file/d/1Sk6-ThL-kz0FkLx1eimS6vhDY09D0WVa/preview",
+            "https://drive.google.com/file/d/1oI37L0PY_E6G0HJKXj-KvCnoCXOY6nSj/preview",
+            "https://drive.google.com/file/d/1OpZWyOTheOW6ncPzo6A9Gnup8COMkstQ/preview",
+            "https://drive.google.com/file/d/1LLlugmNBgGMJ1WbS-p1udgt7sO6o7v7y/preview",
+            "https://drive.google.com/file/d/1hvqdVazU_5GtB1VYu1y_7sijPvHVqa78/preview",
+            "https://drive.google.com/file/d/1VBCXlRoRbCrULubX4beSeT8RgfezIeU3/preview"
         ];
 
-        // Social Media Designs
+        // Social Media Designs - Fixed links to work properly
         const socialMediaDesigns = [
-            "https://drive.google.com/file/d/1dV5du39ximRH6PGH75yFFxlcrgApDagO/view?usp=drive_link",
-            "https://drive.google.com/file/d/1s-OWSOi1WppJIdG6NWnIbTYzLAlDe-RF/view?usp=drive_link",
-            "https://drive.google.com/file/d/14Y_8L17oIkwx7roT-SwS6HPRXAL0oFvF/view?usp=drive_link",
-            "https://drive.google.com/file/d/10vBKR7LqvAfc3FX0VBjaBs62FcWAuGBh/view?usp=drive_link",
-            "https://drive.google.com/file/d/1EDNAgbpboRH2Nk3i93HPaWyfVmy4SeWr/view?usp=drive_link",
-            "https://drive.google.com/file/d/1RV1K357I2kZuLlIkiz4ZxFqeU2RiOrDu/view?usp=drive_link",
-            "https://drive.google.com/file/d/1R78tmUh8TXk0yaq1UZX8mI_5DQueWrWj/view?usp=drive_link",
-            "https://drive.google.com/file/d/1D2VFyUwIbytnms71Hs5g0frfDh2CrFxj/view?usp=drive_link"
+            "https://drive.google.com/file/d/1dV5du39ximRH6PGH75yFFxlcrgApDagO/preview",
+            "https://drive.google.com/file/d/1s-OWSOi1WppJIdG6NWnIbTYzLAlDe-RF/preview",
+            "https://drive.google.com/file/d/14Y_8L17oIkwx7roT-SwS6HPRXAL0oFvF/preview",
+            "https://drive.google.com/file/d/10vBKR7LqvAfc3FX0VBjaBs62FcWAuGBh/preview",
+            "https://drive.google.com/file/d/1EDNAgbpboRH2Nk3i93HPaWyfVmy4SeWr/preview",
+            "https://drive.google.com/file/d/1RV1K357I2kZuLlIkiz4ZxFqeU2RiOrDu/preview",
+            "https://drive.google.com/file/d/1R78tmUh8TXk0yaq1UZX8mI_5DQueWrWj/preview",
+            "https://drive.google.com/file/d/1D2VFyUwIbytnms71Hs5g0frfDh2CrFxj/preview",
+            "https://drive.google.com/file/d/1QaK4B-ilNdxeAbjIwuihaGoyWPj1n97a/preview",
+            "https://drive.google.com/file/d/1kaQTpIXig69RKjlUxLrZwnpM82ovc1r0/preview"
         ];
 
-        // Logo Designs
+        // Logo Designs - Fixed links to work properly
         const logoDesigns = [
-            "https://drive.google.com/file/d/1D6oDuB3PBC8KNp2BkU-xoafmMoopPanm/view?usp=drive_link",
-            "https://drive.google.com/file/d/1D4ERjMlrATkZTr2a05KgpcAnYqCe4JjU/view?usp=drive_link",
-            "https://drive.google.com/file/d/1WYbBx4SrrJUFKRAQCKid7IySQFAXrrPP/view?usp=drive_link",
-            "https://drive.google.com/file/d/1WWXXHhcc4349ZOHjvBf7nAcqMu9UfmWH/view?usp=drive_link",
-            "https://drive.google.com/file/d/1ZTRFLo2MD10Pbpw-Z2pY0Jv_OgA7WNXo/view?usp=drive_link",
-            "https://drive.google.com/file/d/1JI9Ic4MPsNqexaGpIER0jP8YU_j4WFoK/view?usp=drive_link"
+            "https://drive.google.com/file/d/1D6oDuB3PBC8KNp2BkU-xoafmMoopPanm/preview",
+            "https://drive.google.com/file/d/1D4ERjMlrATkZTr2a05KgpcAnYqCe4JjU/preview",
+            "https://drive.google.com/file/d/1WYbBx4SrrJUFKRAQCKid7IySQFAXrrPP/preview",
+            "https://drive.google.com/file/d/1WWXXHhcc4349ZOHjvBf7nAcqMu9UfmWH/preview",
+            "https://drive.google.com/file/d/1ZTRFLo2MD10Pbpw-Z2pY0Jv_OgA7WNXo/preview",
+            "https://drive.google.com/file/d/1JI9Ic4MPsNqexaGpIER0jP8YU_j4WFoK/preview",
+            "https://drive.google.com/file/d/1uBsS1wY8r9Bye6YnuQ-BScucLEJhj78J/preview",
+            "https://drive.google.com/file/d/1M-dkOxo306SXmSNWvXSDsZNcj40sihbP/preview",
+            "https://drive.google.com/file/d/1Y_Mqf3SvwtT5ZXe1c56qHwaJAxja1eb3/preview",
+            "https://drive.google.com/file/d/1kHuI2qS_8SjbdrP5WV8rEMfkzdRVi2rD/preview"
         ];
 
         // Portfolio Data
@@ -1308,7 +1367,6 @@
         const portfolioGrid = document.querySelector('.portfolio-grid');
         const videoContainer = document.querySelector('.video-container');
         const filterButtons = document.querySelectorAll('.filter-btn');
-        const contactForm = document.getElementById('contactForm');
         const motionGraphicsGrid = document.getElementById('motion-graphics-grid');
         const socialMediaGrid = document.getElementById('social-media-grid');
         const logoDesignsGrid = document.getElementById('logo-designs-grid');
@@ -1371,6 +1429,11 @@
                 ? items
                 : items.filter(item => item.category === filter);
 
+            if (filteredItems.length === 0) {
+                portfolioGrid.innerHTML = '<div class="error-message">لا توجد أعمال متاحة لهذا التصنيف حالياً.</div>';
+                return;
+            }
+
             filteredItems.forEach(item => {
                 const portfolioItem = document.createElement('div');
                 portfolioItem.className = 'portfolio-item';
@@ -1391,13 +1454,22 @@
 
         // Load Resource Items
         function loadResourceItems(resourceArray, container, type) {
+            // Remove loading message
             container.innerHTML = '';
+
+            if (!resourceArray || resourceArray.length === 0) {
+                container.innerHTML = '<div class="error-message">لا توجد أعمال متاحة حالياً. سيتم تحديث المحتوى قريباً.</div>';
+                return;
+            }
+
             resourceArray.forEach((resource, index) => {
                 const resourceItem = document.createElement('div');
                 resourceItem.className = 'resource-item';
                 resourceItem.innerHTML = `
-                    <h3 class="resource-title">${type} Design ${index + 1}</h3>
-                    <a href="${resource}" class="resource-link" target="_blank">View on Drive</a>
+                    <h3 class="resource-title">${type} ${index + 1}</h3>
+                    <button class="resource-drive-btn" onclick="window.open('${resource}', '_blank')">
+                        <i class='fab fa-google-drive'></i> مشاهدة العمل على Drive
+                    </button>
                 `;
                 container.appendChild(resourceItem);
             });
@@ -1405,6 +1477,11 @@
 
         // Load Video Items
         function loadVideos() {
+            if (!videoItems || videoItems.length === 0) {
+                videoContainer.innerHTML = '<div class="error-message">لا توجد فيديوهات متاحة حالياً. سيتم تحديث المحتوى قريباً.</div>';
+                return;
+            }
+
             videoItems.forEach(video => {
                 const videoItem = document.createElement('div');
                 videoItem.className = 'video-item';
@@ -1430,13 +1507,6 @@
                 videoContainer.appendChild(videoItem);
             });
         }
-
-        // Form Submission
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
 
         // Animate on scroll
         function animateOnScroll() {
